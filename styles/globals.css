@@ -34,7 +34,7 @@ a {
 
 .container {
   padding: 0 1rem;
-  min-width: 46rem;
+  width: 33rem;
   margin: auto;
 }
 
@@ -88,7 +88,7 @@ a {
 }
 .main-heading h2 {
   position: absolute;
-  font-size: 7.3rem;
+  font-size: 5rem;
   font-weight: 600;
   color: #DEE3E4;
   opacity: .4;
@@ -125,9 +125,12 @@ a {
 /* ******************************
   * NAVBAR
 * ******************************/
-.nav , .nav ul{
+.nav {
   display: flex;
   flex-wrap: wrap;
+}
+.nav ul {
+  display: none;
 }
 .nav {
   justify-content: space-between;
@@ -177,15 +180,15 @@ a:hover , .portfolio-links a:hover ,
   font-weight: 500;
 }
 .header-content h1 {
-  font-size: 4.1rem;
+  font-size: 3.5rem;
 }
 .header-content h1::after {
   content: '';
   animation: typing 14s ease infinite;
 }
 .header-content .sub-heading {
-  font-size: 2.1rem;
-  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -522,6 +525,7 @@ a:hover , .portfolio-links a:hover ,
 }
 .footer p {
   padding: 1.2rem 0;
+  text-align : center;
 }
 .footer a {
   color: #20C997;
@@ -546,12 +550,31 @@ a:hover , .portfolio-links a:hover ,
   * MEDIA QUERY 
   * *****************************
 * ******************************/
+@media screen and (min-width: 500px) {
+  .container {
+      width: 46rem;
+  }
+  .main-heading h2 {
+      font-size: 6.8rem;
+  }
+  .header-content h1 {
+      font-size: 4.1rem;
+  }
+  .header-content .sub-heading {
+      font-size: 2.1rem;
+      margin-bottom: 3rem;
+  }
+}
+
 
 @media screen and (min-width: 576px) {
   .container {
       width: 51.6rem;
       padding: 0;
   }
+  .main-heading h2 {
+    font-size: 7.3rem;
+}
   .gallary {
       column-count: 2;
   }
@@ -565,6 +588,10 @@ a:hover , .portfolio-links a:hover ,
 @media screen and (min-width: 768px) {
   .container {
       width: 67.6rem;
+  }
+  .nav ul {
+    display: flex;
+    flex-wrap: wrap;
   }
   .main-heading{
       padding: 3rem 0 1.8rem;
